@@ -44,10 +44,10 @@
         }
         .center-fit {
             background: url(bg-1.jpg);
-            width: 60%;
+            width: 50%;
             position: absolute;
-            left: 0px;
-            height: 100%;
+            left: 30px;
+            height: 90%;
         }
         .corner-fit {
             background: url(bg-1.jpg);
@@ -62,7 +62,7 @@
             position: absolute;
             left : 795px;
             right: 40px;
-            top : 250px;
+            top : 200px;
         }
         .top-bottom {
             position: absolute;
@@ -74,37 +74,43 @@
             position: absolute;
             left : 795px;
             right: 80px;
-            top : 400px;
+            top : 450px;
         }
         .footerPlaceholder {
             position: absolute;
             left : 795px;
             right: 80px;
-            top : 500px;
+            top : 550px;
+        }
+        .Placeholder {
+            position: absolute;
+            left : 795px;
+            right: 80px;
+            top : 250px;
         }
     </style>
   </head>
   <body>
     <div class="imgbox">
-      <img class="center-fit" src="https://fs.ttu.edu/adfs/portal/illustration/illustration.jpg">  -->
+      <img class="center-fit" src="https://d2j6dbq0eux0bg.cloudfront.net/images/24479407/3365234295.jpg">
       <div class="top-right"><h1 style="color: black;">eRaider chatbot</h1></div>
       <img class="corner-fit" src="data:image/png;base64,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"> 
       </div>
-      <form class="top-bottom">
-          <label for="question"><h3>Ask me a question</h3></label>
-          <input type="text" id="text-input" style="font-size:16pt;" name="question" >
+      <div class="Placeholder">
+          <h3>Ask me a question</h3></label>
+          <input type="text" id="text-input" style="font-size:12pt;" name="question" >
           <button id="voice-input-btn"><i class="fa fa-microphone"></i></button>
           <input type="submit" id="submit-btn" style="font-size:16pt;" value="Submit">
           <div id="answer"></div>
-          <div id="answer-box"></div>
-      </form>
-      <!-- <div>
+          <!-- <div id="answer-box"></div> -->
+      </div>
+      <div>
       <p class="bottom-right">This chat box is used to confirm the details of a student who joined Texas Tech University.
           One can confirm all the details including a student Rnumber,their current enrolled
           course,their current GPA status including their Pass standards etc. 
       </p>
-      </div> -->
-      <div class="footerPlaceholder">       
+      </div>
+      <!-- <div class="footerPlaceholder">       
           <fieldset style="font-size: 12px;">
           <legend>&nbsp; For Assistance Contact &nbsp;</legend>
               <ul style="padding-left: 20px;">
@@ -114,16 +120,8 @@
               <a id="" href="">IT Solution Center</a></li>
               </ul>
           </fieldset>
-      </div> 
+      </div>  -->
    
-   
-  <!-- <body>
-    <h1>Ask a Question</h1>
-    <div id="answer"></div>
-    <button id="voice-input-btn"><i class="fa fa-microphone"></i></button>
-    <input type="text" id="text-input" placeholder="Type your question...">
-    <button id="submit-btn">Submit</button>
-    <div id="answer-box"></div> -->
     <script>
       var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];

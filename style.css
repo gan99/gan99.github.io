@@ -24,8 +24,8 @@ button i.fa {
 #text-input {
   margin-top: 20px;
   padding: 10px;
-  font-size: 24px;
-  width: 400px;
+  font-size: 13px;
+  width: 250px;
 }
 
 .hidden {
@@ -38,15 +38,15 @@ button i.fa {
 }
 
 #answer {
-  margin-top: 20px;
+  margin-top: 15px;
   padding: 10px;
-  font-size: 24px;
-  width: 500px;
-  right : 80px;
-  margin-top: 20px;
-  font-size: 24px;
+  font-size: 15px;
+  width: 350px;
+  right : 70px;
+  margin-top: 15px;
+  font-size: 15px;
   font-weight: bold;
-  color: #3366cc;
+  color:brown;
 }
 
 #answer-box {
