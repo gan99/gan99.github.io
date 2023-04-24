@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-<title>Chatbot - TexasTech Portal</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Chatbot - TexasTech Portal</title>
 <link rel = "icon" href = 
 "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0023/5616/brand.gif?itok=4FhU8Zmr" 
         type = "image/x-icon">
@@ -31,8 +32,8 @@
         padding: 10px;
         margin-top: 80px;
         display: inline-block;
-       text-align: right;
-       height: auto;
+        text-align: right;
+        height: auto;
       }
       * {
             margin: 0;
@@ -88,7 +89,7 @@
             right: 80px;
             top : 250px;
         }
-    </style>
+         </style>   
   </head>
   <body>
     <div class="imgbox">
@@ -110,34 +111,49 @@
           course,their current GPA status including their Pass standards etc. 
       </p>
       </div>
-      <!-- <div class="footerPlaceholder">       
-          <fieldset style="font-size: 12px;">
-          <legend>&nbsp; For Assistance Contact &nbsp;</legend>
-              <ul style="padding-left: 20px;">
-                  <li>TTU -
-              <a id="" href="">Help Central</a></li>
-                  <li>HSC -
-              <a id="" href="">IT Solution Center</a></li>
-              </ul>
-          </fieldset>
-      </div>  -->
-   
+
     <script>
       var isClose=true;
         const stopwords = ["of", "the", "a", "an", "any", "is", "can", "who", "what", "why", "whom"];
-        var editor = "sorts\n" +  
-        " #student={sainath,aishu,ganesh,nikitha}.\n" + 
-        " #course={intelligent_systems,advanced_operating_systems,theory_of_automata}.\n" +
-        " predicates\n" + 
-        " enrolled(#student, #course).\n" + 
-        " rules\n" + 
-        " enrolled(sainath,intelligent_systems).\n" + 
-        " enrolled(sainath,advanced_operating_systems).\n" + 
-        " enrolled(aishu,intelligent_systems).\n" + 
-        " enrolled(ganesh,advanced_operating_systems).\n" + 
-        " enrolled(nikitha,intelligent_systems).\n" + 
-        " enrolled(nikitha,advanced_operating_systems).\n" + 
-        " enrolled(nikitha,theory_of_automata).";
+          var editor = "sorts\n" +
+            " #student={sai,aishu,gani,nikki}.\n" +
+            " #grade={1,2,3,4,5}.\n" +
+            " #rnumber={11,12,13,14,15}.\n" +
+            " #course={intelligent_systems,advanced_operating_systems,theory_of_automata}.\n" +
+            " predicates\n" +
+            "rnumber(#student, #rnumber).\n" +
+            "enrolled(#student, #course).\n" +
+            "grade(#student, #course, #grade).\n" +
+            "pass(#student, #course).\n" +
+            "good_standing(#student).\n" +
+            "rules\n" +
+            //Student Rnumber
+            "rnumber(sai,11).\n" +
+            "rnumber(aishu,12).\n" +
+            "rnumber(gani,13).\n" +
+            "rnumber(nikki,14).\n" +
+            //Students can enroll in courses
+            //enrolled(X,Y)
+            "enrolled(sai,intelligent_systems).\n" +
+            "enrolled(sai,advanced_operating_systems).\n" +
+            "enrolled(aishu,intelligent_systems).\n" +
+            "enrolled(gani,advanced_operating_systems).\n" +
+            "enrolled(nikki,intelligent_systems).\n" +
+            "enrolled(nikki,advanced_operating_systems).\n" +
+            "enrolled(nikki,theory_of_automata).\n" +
+            //Professors can grade students in courses
+            //grade(X,Y,Z)
+            "grade(sai,intelligent_systems,4).\n" +
+            "grade(sai,advanced_operating_systems,3).\n" +
+            "grade(aishu,intelligent_systems,5).\n" +
+            "grade(gani,advanced_operating_systems,2).\n" +
+            "grade(nikki,intelligent_systems,3).\n" +
+            "grade(nikki,advanced_operating_systems,4).\n" +
+            "grade(nikki,theory_of_automata,5).\n" +
+            //A student passes a course if their grade is 3 or higher
+            "pass(X,Y) :- grade(X,Y,Z),Z>3.\n" +
+            //A student is in good standing if they pass all their courses
+            "good_standing(X) :- enrolled(X,Y), pass(X,Y).";
         // sorts
         var contstring = editor.split("sorts\n")[1].split("predicates\n");
         var sortstring = contstring[0].split('.');
@@ -317,9 +333,9 @@
                // });
             }
         }
-        
- 
 
-    </script>
+
+
+</script>
   </body>
 </html>
